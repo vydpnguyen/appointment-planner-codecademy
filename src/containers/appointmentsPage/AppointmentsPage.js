@@ -3,10 +3,9 @@ import React, { useState } from "react";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
 
-export const AppointmentsPage = () => {
+export const AppointmentsPage = ({ appointments, contacts, addAppointments }) => {
   /*
-  Define state variables for 
-  appointment info
+  Define state variables for appointment info
   */
 
   const handleSubmit = (e) => {

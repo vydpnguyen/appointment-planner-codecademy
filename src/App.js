@@ -3,17 +3,37 @@ import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, N
 import Root, { ROUTES } from "./components/root/Root";
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
+import { useState } from "react";
 
 function App() {
   /*
-  Define state variables for 
-  contacts and appointments 
+  Define state variables for contacts and appointments 
   */
+  const [contacts, setContacts] = useState([]);
+  const [appointments, setAppointments] = useState([]);
 
   /*
-  Implement functions to add data to
-  contacts and appointments
+  Implement functions to add data to contacts and appointments
   */
+  const addContacts = (name, phone, email) => {
+    const newContact = {
+      name: name,
+      phone: phone,
+      email: email
+    };
+    setContacts([...contacts, newContact]);
+  }
+
+  const addAppointments = (name, contact, date, time) => {
+    const newAppointment = {
+      name: name,
+      contact: contact,
+      date: date,
+      time: time
+    };
+    setAppointments(...appointments, newAppointment);
+  }
+
 
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={ <Root/> }>

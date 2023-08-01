@@ -52,7 +52,7 @@ export const ContactsPage = ({ contacts, addContacts }) => {
       <section>
         <h2>
           Add Contact
-          {isDuplicate ? 'Contact Name Already Exists' : ''}
+          {/* isDuplicate ? 'Contact Name Already Exists' : ''*/}
         </h2> 
         <ContactForm name={name} setName={setName} phone={phone} setPhone={setPhone} email={email} setEmail={setEmail} handleSubmit={handleSubmit}/>
       </section>

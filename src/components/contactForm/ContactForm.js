@@ -19,7 +19,8 @@ export const ContactForm = ({
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder='Enter your name'
-        required></input>
+        required>
+      </input>
       <br/>
       <label for='phone'>Phone number</label>
       <input
@@ -28,10 +29,11 @@ export const ContactForm = ({
         name='phone'
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
-        placeholder='Enter your phone (###-###-####)'
+        placeholder='###-###-####'
         // US phone regex
         pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"
-        required></input>
+        required>
+      </input>
       <br />
       <label for='email'>Email</label>
       <input
@@ -41,7 +43,8 @@ export const ContactForm = ({
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder='Enter your email'
-        required></input>
+        required>
+      </input>
       <br/>
       <input type="submit" value="Add Contact" aria-label="Add Contact"/>
     </form>

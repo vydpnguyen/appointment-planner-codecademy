@@ -38,8 +38,8 @@ export const ContactsPage = ({ contacts, addContacts }) => {
       addContacts(name, phone, email);
       // A successful submission should clear the form
       setName('');
+      setPhone('');
       setEmail('');
-      setIsDuplicate('');
     }
   };
 
@@ -54,7 +54,14 @@ export const ContactsPage = ({ contacts, addContacts }) => {
           Add Contact
           {/* isDuplicate ? 'Contact Name Already Exists' : ''*/}
         </h2> 
-        <ContactForm name={name} setName={setName} phone={phone} setPhone={setPhone} email={email} setEmail={setEmail} handleSubmit={handleSubmit}/>
+        <ContactForm
+          name={name}
+          setName={setName}
+          phone={phone}
+          setPhone={setPhone}
+          email={email}
+          setEmail={setEmail}
+          handleSubmit={handleSubmit}/>
       </section>
       <hr />
       <section>

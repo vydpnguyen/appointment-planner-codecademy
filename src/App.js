@@ -31,7 +31,7 @@ function App() {
       date: date,
       time: time
     };
-    setAppointments(...appointments, newAppointment);
+    setAppointments([...appointments, newAppointment]);
   }
 
 

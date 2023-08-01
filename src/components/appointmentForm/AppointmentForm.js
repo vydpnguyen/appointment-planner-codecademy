@@ -57,7 +57,7 @@ export const AppointmentForm = ({
         value={date}
         min={getTodayString()}
         onChange={(e) => setDate(e.target.value)}
-        placeholder='Enter date'
+        placeholder='Pick a date'
         required>
       </input>
       <br/>
@@ -68,7 +68,7 @@ export const AppointmentForm = ({
         name='time'
         value={time}
         onChange={(e) => setTime(e.target.value)}
-        placeholder='Enter the time'
+        placeholder='Pick a time'
         required>
       </input>
       <br/>
